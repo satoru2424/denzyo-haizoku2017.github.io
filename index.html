@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet" />
+	<style>.wf-nicomoji { font-family: "Nico Moji"; }</style>
+	<title>###でんじょー ぞつけん はいぞく しゅみれーた###</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="jquery-ui.min.js"></script>
+	<script type="text/javascript" src="src/rouletteWheel.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			//var itemsToShow = parseInt(4 + Math.random()*10);
+			//console.log(itemsToShow);
+			var items = ['あだちけん','あらいけん','あらかわけん','いちげけん',
+						'おーやけん','おーやまけん','おちあいけん','かわむらけん','くがけん',
+						'くらみつけん','こうのけん','こくぶんけん','しまけん','しものけん',
+						'すぎもとけん','たけむらけん','つじけん','にしじまけん','はねじけん','ばばけん',
+						'はまがみけん','ふじもとけん','やまなしけん','よしかわけん','りゅーねん！'];
+
+		  $('#canvas').rouletteWheel({
+		    items : items,
+		    selected : function(key, value){
+		      alert('すごーい！ ' + value + ' たのしー！');
+					document.title = 'すごーい！ ' + value + ' たのしー！';
+		    },
+		    spinText : 'でんじょー',
+		  });
+
+		});
+	</script>
+	<title></title>
+</head>
+<body>
+
+	<canvas id="canvas" width="800" height="800"></canvas>
+
+</body>
+</html>
